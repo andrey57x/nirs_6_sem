@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Fashion CLIP Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Семантический поиск одежды</h1>
+        
+        <div class="tabs">
+            <button id="btnModeSearch" class="tab-btn active">Поиск по базе</button>
+            <button id="btnModeCompare" class="tab-btn">Сравнение (Baseline)</button>
+        </div>
+
+        <!-- Поиск по базе -->
+        <div id="sectionSearch">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Например: yellow socks..." disabled>
+                <button id="searchBtn" disabled>Поиск</button>
+            </div>
+            <div class="results" id="resultsGrid"></div>
+        </div>
+
+        <!-- Сравнение (Бэйзлайн) -->
+        <div id="sectionCompare" style="display: none;">
+            <div class="compare-card">
+                <input type="file" id="imageUpload" accept="image/*">
+                <input type="text" id="compareTextInput" placeholder="Текст для сравнения...">
+                <button id="compareBtn">Сравнить картинку и текст</button>
+                <h2 id="compareResultValue">--</h2>
+            </div>
+        </div>
+
+        <div id="status">Загрузка данных...</div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
